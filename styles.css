@@ -1,0 +1,64 @@
+body {
+    background: linear-gradient(to bottom, #48b0e0, #ffe45c3b); /* Subtle gradient background */
+    font-family: Arial, sans-serif; /* Change font family */
+  
+    background-size: cover; /* Adjust the image size to cover the box */
+    background-position: center;
+}
+
+.head {
+    background: linear-gradient(to bottom, #2ECBE9, #ffe45c3b); /* Subtle gradient background */
+ 
+    padding: 30px 20px; /* Increase padding for better header appearance */
+    text-align: center;
+    color: white; /* Change header text color */
+}
+
+.center-text {
+    text-align: center;
+    margin-bottom: 30px; /* Increase space between sections */
+}
+
+.box-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    margin-top: 30px;
+}
+
+.box {
+    background-color: #E0F2F7;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Better box shadow */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    margin: 20px;
+}
+
+.box:hover {
+    transform: scale(1.05); /* Grow a bit on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.option label,
+.option select {
+    margin-right: 10px;
+    font-size: 16px; /* Increase font size for better readability */
+}

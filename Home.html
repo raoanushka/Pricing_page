@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="head">
+        <h1>Coding Academy Pricing Plans</h1>
+    </div><br>
+    <center><h2>Choose Your Path to Mastery</h2></center>
+    <hr>
+    <div class="container">
+        <div class="options">
+            <h3>
+            <label for="CurrencySelect">Select Currency:</label>
+            <select id="currencySelect">
+                <option value="$">USD ($)</option>
+                <option value="Rs">INR(Rs)</option>
+            </h3>
+            </select>
+        </div>
+    </div>
+ 
+    <div class="box-container">
+        <div class="box">
+            <center>
+                <h1>Starter</h1>
+                <p>Price (per month)</p>
+                <p><span class="starterPrice">$19.99</span></p>
+                <p><b>Features</b></p>
+                <p>Access to beginner-level coding courses</p>
+            </center>
+        </div>
+   
+        <div class="box">
+            <center>
+                <h1>Intermediate</h1>
+                <p>Price (per month)</p>
+                <p><span class="intermediatePrice">$29.99</span></p>
+                <p><b>Features</b></p>
+                <p>Intermediate courses + Project mentoring</p>
+            </center>
+        </div>
+   
+        <div class="box">
+            <center>
+                <h1>Advanced</h1>
+                <p>Price (per month)</p>
+                <p><span class="advancedPrice">$49.99</span></p>
+                <p><b>Features</b></p>
+                <p>Full access to all courses + Live workshops</p>
+            </center>
+        </div>
+    </div>
+
+    <script>
+        const currencySelect = document.getElementById('currencySelect');
+        const starterPrice = document.querySelector('.starterPrice');
+        const intermediatePrice = document.querySelector('.intermediatePrice');
+        const advancedPrice = document.querySelector('.advancedPrice');
+
+        currencySelect.addEventListener('change', () => {
+            const selectedCurrency = currencySelect.value;
+            
+            if (selectedCurrency === 'Rs') {
+                starterPrice.textContent = '₹' + (parseFloat(starterPrice.textContent.replace('$', '')) * 74.50).toFixed(2);
+                intermediatePrice.textContent = '₹' + (parseFloat(intermediatePrice.textContent.replace('$', '')) * 74.50).toFixed(2);
+                advancedPrice.textContent = '₹' + (parseFloat(advancedPrice.textContent.replace('$', '')) * 74.50).toFixed(2);
+            } else {
+                starterPrice.textContent = '$' + (parseFloat(starterPrice.textContent.replace('₹', '')) / 74.50).toFixed(2);
+                intermediatePrice.textContent = '$' + (parseFloat(intermediatePrice.textContent.replace('₹', '')) / 74.50).toFixed(2);
+                advancedPrice.textContent = '$' + (parseFloat(advancedPrice.textContent.replace('₹', '')) / 74.50).toFixed(2);
+            }
+        });
+    </script>
+</body>
+</html>
