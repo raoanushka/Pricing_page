@@ -1,28 +1,27 @@
 body {
-    background: linear-gradient(to bottom, #48b0e0, #ffe45c3b); /* Subtle gradient background */
-    font-family: Arial, sans-serif; /* Change font family */
+    background: linear-gradient(to bottom,#E4F3E3 , #5CA9E9);
+    font-family: Arial, sans-serif;
   
-    background-size: cover; /* Adjust the image size to cover the box */
+    background-size: cover; 
     background-position: center;
 }
 
 .head {
-    background: linear-gradient(to bottom, #2ECBE9, #ffe45c3b); /* Subtle gradient background */
- 
-    padding: 30px 20px; /* Increase padding for better header appearance */
+    background: linear-gradient(to bottom, #5CA9E9 , #2969a4); 
+    padding: 30px 20px; 
     text-align: center;
-    color: white; /* Change header text color */
+    color: white; 
 }
 
 .center-text {
     text-align: center;
-    margin-bottom: 30px; /* Increase space between sections */
+    margin-bottom: 30px; 
 }
 
 .box-container {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow boxes to wrap on smaller screens */
+    flex-wrap: wrap; 
     margin-top: 30px;
 }
 
@@ -33,16 +32,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Better box shadow */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     padding: 20px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition on hover */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     margin: 20px;
+    cursor: pointer;
 }
 
 .box:hover {
-    transform: scale(1.05); /* Grow a bit on hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .container {
@@ -60,13 +60,16 @@ body {
 .option label,
 .option select {
     margin-right: 10px;
-    font-size: 16px; /* Increase font size for better readability */
+    font-size: 16px;
 }
-.box.expanded {
-    height: auto;
+
+
+.box .box-content {
+    display: none; 
 }
 
 .box.expanded .box-content {
     display: block;
 }
+
 

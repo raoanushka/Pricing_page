@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div class="head">
@@ -15,12 +16,12 @@
     <div class="container">
         <div class="options">
             <h3>
-            <label for="CurrencySelect">Select Currency:</label>
-            <select id="currencySelect">
-                <option value="$">USD ($)</option>
-                <option value="Rs">INR(Rs)</option>
+                <label for="CurrencySelect">Select Currency:</label>
+                <select id="currencySelect">
+                    <option value="$">USD ($)</option>
+                    <option value="Rs">INR(Rs)</option>
+                </select>
             </h3>
-            </select>
         </div>
     </div>
  
@@ -31,39 +32,48 @@
                 <p>Price (per month)</p>
                 <p><span class="starterPrice">$19.99</span></p>
                 <p><b>Features</b></p>
-                <p class="box-content">Access to beginner-level coding courses</p>
-                <script>
-                    function expandBox(box) {
-    box.classList.toggle('expanded');
-}
-
-                </script>
+                <p class="box-content">
+                    <i class="fa fa-check-square"></i> Access to beginner-level coding courses<br>
+                    <i class="fa fa-check-square"></i> Video lectures and tutorials<br>
+                    <i class="fa fa-check-square"></i> Quizzes and assignments for practice
+                </p>
             </center>
         </div>
-        
    
-        <div class="box">
+        <div class="box" onclick="expandBox(this)">
             <center>
                 <h1>Intermediate</h1>
                 <p>Price (per month)</p>
                 <p><span class="intermediatePrice">$29.99</span></p>
                 <p><b>Features</b></p>
-                <p>Intermediate courses + Project mentoring</p>
+                <p class="box-content">
+                    <i class="fa fa-check-square"></i> Access to intermediate-level coding courses<br>
+                    <i class="fa fa-check-square"></i> Project mentoring and guidance<br>
+                    <i class="fa fa-check-square"></i> Hands-on coding projects
+                </p>
             </center>
         </div>
    
-        <div class="box">
+        <div class="box" onclick="expandBox(this)">
             <center>
                 <h1>Advanced</h1>
                 <p>Price (per month)</p>
                 <p><span class="advancedPrice">$49.99</span></p>
                 <p><b>Features</b></p>
-                <p>Full access to all courses + Live workshops</p>
+                <p class="box-content">
+                    <i class="fa fa-check-square"></i> Access to advanced-level coding courses<br>
+                    <i class="fa fa-check-square"></i> Advanced project mentoring and guidance<br>
+                    <i class="fa fa-check-square"></i> Live coding workshops
+                </p>
             </center>
         </div>
     </div>
 
     <script>
+        function expandBox(box) {
+            box.classList.toggle('expanded');
+        }
+
         const currencySelect = document.getElementById('currencySelect');
         const starterPrice = document.querySelector('.starterPrice');
         const intermediatePrice = document.querySelector('.intermediatePrice');
