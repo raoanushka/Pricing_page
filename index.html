@@ -25,15 +25,22 @@
     </div>
  
     <div class="box-container">
-        <div class="box">
+        <div class="box" onclick="expandBox(this)">
             <center>
                 <h1>Starter</h1>
                 <p>Price (per month)</p>
                 <p><span class="starterPrice">$19.99</span></p>
                 <p><b>Features</b></p>
-                <p>Access to beginner-level coding courses</p>
+                <p class="box-content">Access to beginner-level coding courses</p>
+                <script>
+                    function expandBox(box) {
+    box.classList.toggle('expanded');
+}
+
+                </script>
             </center>
         </div>
+        
    
         <div class="box">
             <center>
