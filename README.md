@@ -1,3 +1,5 @@
+live demo:https://raoanushka.github.io/Pricing_page/
+
 Page Description:
 The Coding Academy Pricing Plans page showcases different subscription tiers with their respective features and pricing. The design aims for a clean, organized layout providing users with a clear understanding of each plan's offerings.
 
